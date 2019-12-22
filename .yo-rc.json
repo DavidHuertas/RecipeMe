@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.orchardsoft.recipeme",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "monolith",
+    "baseName": "RecipeMe",
+    "packageName": "com.orchardsoft.recipeme",
+    "packageFolder": "com/orchardsoft/recipeme",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MzJhOGU3YTA3Mjk4N2Q0MTk4NmI2NTZmMDg1ZDZlNzdiMWE4YmI5NTZmY2ZmY2QxNTE3MjUxNWE1Y2VjMThhMTZjZThmNTA5ZDg5YjJjMzJmODVhMTE4OTE2YzQyYTE5NjY0NWIzMzY5YTYwMmEwZDFmODRhZjZkY2Y0MGQxYmM=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "sketchy",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1577014908883,
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "es"],
+    "blueprints": []
+  }
+}
