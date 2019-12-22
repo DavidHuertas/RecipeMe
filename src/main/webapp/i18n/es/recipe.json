@@ -19,7 +19,8 @@
       },
       "name": "Name",
       "description": "Description",
-      "user": "User"
+      "user": "User",
+      "ingredient": "Ingredient"
     }
   }
 }

@@ -23,6 +23,12 @@
             "otherEntityRelationshipName": "recipe",
             "relationshipName": "user",
             "otherEntityField": "login"
+        },
+        {
+            "relationshipName": "ingredient",
+            "otherEntityName": "ingredient",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "recipe"
         }
     ],
     "changelogDate": "20191222122009",
@@ -34,5 +40,7 @@
     "fluentMethods": true,
     "readOnly": false,
     "clientRootFolder": "",
-    "applications": "*"
+    "applications": "*",
+    "searchEngine": "elasticsearch",
+    "databaseType": "sql"
 }
