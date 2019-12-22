@@ -19,7 +19,8 @@
       },
       "name": "Name",
       "amount": "Amount",
-      "unit": "Unit"
+      "unit": "Unit",
+      "recipe": "Recipe"
     }
   }
 }

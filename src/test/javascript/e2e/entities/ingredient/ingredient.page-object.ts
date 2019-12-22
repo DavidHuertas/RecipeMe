@@ -29,6 +29,7 @@ export class IngredientUpdatePage {
   nameInput = element(by.id('field_name'));
   amountInput = element(by.id('field_amount'));
   unitSelect = element(by.id('field_unit'));
+  recipeSelect = element(by.id('field_recipe'));
 
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getAttribute('jhiTranslate');
@@ -63,6 +64,25 @@ export class IngredientUpdatePage {
       .all(by.tagName('option'))
       .last()
       .click();
+  }
+
+  async recipeSelectLastOption(): Promise<void> {
+    await this.recipeSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async recipeSelectOption(option: string): Promise<void> {
+    await this.recipeSelect.sendKeys(option);
+  }
+
+  getRecipeSelect(): ElementFinder {
+    return this.recipeSelect;
+  }
+
+  async getRecipeSelectedOption(): Promise<string> {
+    return await this.recipeSelect.element(by.css('option:checked')).getText();
   }
 
   async save(): Promise<void> {

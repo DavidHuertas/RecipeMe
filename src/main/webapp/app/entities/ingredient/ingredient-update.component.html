@@ -58,6 +58,13 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="recipeMeApp.ingredient.recipe" for="field_recipe">Recipe</label>
+                    <select class="form-control" id="field_recipe" name="recipe" formControlName="recipe">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="recipeOption.id === editForm.get('recipe')!.value?.id ? editForm.get('recipe')!.value : recipeOption" *ngFor="let recipeOption of recipes; trackBy: trackById">{{recipeOption.id}}</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">

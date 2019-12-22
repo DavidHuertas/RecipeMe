@@ -37,6 +37,7 @@
             <th scope="col"  jhiSortBy="name"><span jhiTranslate="recipeMeApp.ingredient.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th scope="col"  jhiSortBy="amount"><span jhiTranslate="recipeMeApp.ingredient.amount">Amount</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th scope="col"  jhiSortBy="unit"><span jhiTranslate="recipeMeApp.ingredient.unit">Unit</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="recipe.id"><span jhiTranslate="recipeMeApp.ingredient.recipe">Recipe</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th scope="col"></th>
             </tr>
             </thead>
@@ -46,6 +47,11 @@
                 <td>{{ingredient.name}}</td>
                 <td>{{ingredient.amount}}</td>
                 <td jhiTranslate="{{'recipeMeApp.Unit.' + ingredient.unit}}">{{ingredient.unit}}</td>
+                <td>
+                    <div *ngIf="ingredient.recipe">
+                        <a [routerLink]="['/recipe', ingredient.recipe?.id, 'view' ]" >{{ingredient.recipe?.id}}</a>
+                    </div>
+                </td>
                 <td class="text-right">
                     <div class="btn-group">
                         <button type="submit"

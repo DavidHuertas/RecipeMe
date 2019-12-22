@@ -17,6 +17,12 @@
                 <dd>
                     <span jhiTranslate="{{'recipeMeApp.Unit.' + ingredient.unit}}">{{ingredient.unit}}</span>
                 </dd>
+                <dt><span jhiTranslate="recipeMeApp.ingredient.recipe">Recipe</span></dt>
+                <dd>
+                    <div *ngIf="ingredient.recipe">
+                        <a [routerLink]="['/recipe', ingredient.recipe?.id, 'view']">{{ingredient.recipe?.id}}</a>
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"

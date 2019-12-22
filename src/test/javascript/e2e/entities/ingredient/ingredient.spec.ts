@@ -41,7 +41,8 @@ describe('Ingredient e2e test', () => {
     await promise.all([
       ingredientUpdatePage.setNameInput('name'),
       ingredientUpdatePage.setAmountInput('5'),
-      ingredientUpdatePage.unitSelectLastOption()
+      ingredientUpdatePage.unitSelectLastOption(),
+      ingredientUpdatePage.recipeSelectLastOption()
     ]);
     expect(await ingredientUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');
     expect(await ingredientUpdatePage.getAmountInput()).to.eq('5', 'Expected amount value to be equals to 5');

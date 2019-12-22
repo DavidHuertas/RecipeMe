@@ -1,4 +1,5 @@
 package com.orchardsoft.recipeme.domain;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -41,6 +42,10 @@ public class Ingredient implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "unit", nullable = false)
     private Unit unit;
+
+    @ManyToOne
+    @JsonIgnoreProperties("ingredients")
+    private Recipe recipe;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -88,6 +93,19 @@ public class Ingredient implements Serializable {
 
     public void setUnit(Unit unit) {
         this.unit = unit;
+    }
+
+    public Recipe getRecipe() {
+        return recipe;
+    }
+
+    public Ingredient recipe(Recipe recipe) {
+        this.recipe = recipe;
+        return this;
+    }
+
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
