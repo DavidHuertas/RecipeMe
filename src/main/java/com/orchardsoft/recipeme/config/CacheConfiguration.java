@@ -45,6 +45,9 @@ public class CacheConfiguration {
             createCache(cm, com.orchardsoft.recipeme.domain.User.class.getName());
             createCache(cm, com.orchardsoft.recipeme.domain.Authority.class.getName());
             createCache(cm, com.orchardsoft.recipeme.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.orchardsoft.recipeme.domain.Recipe.class.getName());
+            createCache(cm, com.orchardsoft.recipeme.domain.Ingredient.class.getName());
+            createCache(cm, com.orchardsoft.recipeme.domain.Conversion.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

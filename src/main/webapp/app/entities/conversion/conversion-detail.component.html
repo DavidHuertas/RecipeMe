@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conversion">
+            <h2><span jhiTranslate="recipeMeApp.conversion.detail.title">Conversion</span> {{conversion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="recipeMeApp.conversion.originUnit">Origin Unit</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'recipeMeApp.Unit.' + conversion.originUnit}}">{{conversion.originUnit}}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeMeApp.conversion.convertedUnit">Converted Unit</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'recipeMeApp.Unit.' + conversion.convertedUnit}}">{{conversion.convertedUnit}}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeMeApp.conversion.converter">Converter</span></dt>
+                <dd>
+                    <span>{{conversion.converter}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/conversion', conversion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

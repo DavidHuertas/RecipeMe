@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="ingredient">
+            <h2><span jhiTranslate="recipeMeApp.ingredient.detail.title">Ingredient</span> {{ingredient.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="recipeMeApp.ingredient.name">Name</span></dt>
+                <dd>
+                    <span>{{ingredient.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeMeApp.ingredient.amount">Amount</span></dt>
+                <dd>
+                    <span>{{ingredient.amount}}</span>
+                </dd>
+                <dt><span jhiTranslate="recipeMeApp.ingredient.unit">Unit</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'recipeMeApp.Unit.' + ingredient.unit}}">{{ingredient.unit}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ingredient', ingredient.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

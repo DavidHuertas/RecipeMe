@@ -1,0 +1,40 @@
+{
+    "name": "Conversion",
+    "fields": [
+        {
+            "fieldName": "originUnit",
+            "fieldType": "Unit",
+            "fieldValues": "G,KG,ML,L,TSP,TBSP,CUP",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "convertedUnit",
+            "fieldType": "Unit",
+            "fieldValues": "G,KG,ML,L,TSP,TBSP,CUP",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "converter",
+            "fieldType": "BigDecimal",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191222122011",
+    "entityTableName": "conversion",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

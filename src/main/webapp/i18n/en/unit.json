@@ -1,0 +1,14 @@
+{
+  "recipeMeApp": {
+    "Unit": {
+      "null": "",
+      "G": "G",
+      "KG": "KG",
+      "ML": "ML",
+      "L": "L",
+      "TSP": "TSP",
+      "TBSP": "TBSP",
+      "CUP": "CUP"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+entity Recipe {
+	name String required,
+    description String required
+}
+
+entity Ingredient {
+	name String required,
+    amount BigDecimal required min(0),
+    unit Unit required
+}
+
+entity Conversion {
+	originUnit Unit required,
+    convertedUnit Unit required,
+    converter BigDecimal min(0)
+}
+
+enum Unit {
+    G,
+    KG,
+    ML,
+    L,
+	TSP,
+    TBSP,
+    CUP
+}
+
+relationship ManyToOne {
+	Recipe{user(login)} to User
+}
+
+paginate Recipe, Ingredient, Conversion with infinite-scroll
+

@@ -1,0 +1,25 @@
+{
+  "recipeMeApp": {
+    "conversion": {
+      "home": {
+        "title": "Conversions",
+        "createLabel": "Create a new Conversion",
+        "createOrEditLabel": "Create or edit a Conversion",
+        "search": "Search for Conversion",
+        "notFound": "No Conversions found"
+      },
+      "created": "A new Conversion is created with identifier {{ param }}",
+      "updated": "A Conversion is updated with identifier {{ param }}",
+      "deleted": "A Conversion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Conversion {{ id }}?"
+      },
+      "detail": {
+        "title": "Conversion"
+      },
+      "originUnit": "Origin Unit",
+      "convertedUnit": "Converted Unit",
+      "converter": "Converter"
+    }
+  }
+}
