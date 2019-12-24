@@ -5,6 +5,7 @@
         "title": "Recipes",
         "createLabel": "Create a new Recipe",
         "createOrEditLabel": "Create or edit a Recipe",
+        "addIngredients": "Add Ingredients",
         "search": "Search for Recipe",
         "notFound": "No Recipes found"
       },

@@ -1,10 +1,4 @@
-import { Component, NgModule } from '@angular/core';
-
-import { IngredientComponent } from 'app/entities/ingredient/ingredient.component';
-
-@NgModule({
-  declarations: [IngredientComponent]
-})
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'jhi-add-ingredient',

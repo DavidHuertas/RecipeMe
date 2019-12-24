@@ -1,10 +1,5 @@
 <form class="form-inline" name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
     <jhi-alert-error></jhi-alert-error>
-    <div class="form-group" [hidden]="!editForm.get('id')!.value">
-        <label for="id" jhiTranslate="global.field.id">ID</label>
-        <input type="text" class="form-control" id="id" name="id" formControlName="id"
-            readonly />
-    </div>
     <div class="form-group">
         <label class="form-control-label" jhiTranslate="recipeMeApp.ingredient.name" for="field_name">Name</label>
         <input type="text" class="form-control" name="name" id="field_name"
@@ -53,20 +48,12 @@
             </small>
         </div>
     </div>
-
-    <div class="form-group">
-        <label class="form-control-label" jhiTranslate="recipeMeApp.ingredient.recipe" for="field_recipe">Recipe</label>
-        <select class="form-control" id="field_recipe" name="recipe" formControlName="recipe">
-            <option [ngValue]="null"></option>
-            <option [ngValue]="recipeOption.id === editForm.get('recipe')!.value?.id ? editForm.get('recipe')!.value : recipeOption" *ngFor="let recipeOption of recipes; trackBy: trackById">{{recipeOption.id}} - {{recipeOption.name}}</option>
-        </select>
-    </div>
     <div class="form-group">
         <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
-            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Delete</span>
         </button>
         <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
-            <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+            <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.add">Add</span>
         </button>
     </div>
 </form>

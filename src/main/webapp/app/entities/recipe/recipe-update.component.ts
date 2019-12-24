@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { FormBuilder, Validators } from '@angular/forms';
@@ -8,14 +8,10 @@ import { map } from 'rxjs/operators';
 
 import { IRecipe, Recipe } from 'app/shared/model/recipe.model';
 import { RecipeService } from './recipe.service';
-import { AddIngredientComponent} from './add-ingredient/add-ingredient.component';
 import { IngredientService } from 'app/entities/ingredient/ingredient.service';
 import { IUser } from 'app/core/user/user.model';
 import { UserService } from 'app/core/user/user.service';
 
-@NgModule({
-    declarations: [AddIngredientComponent]
-})
 @Component({
   selector: 'jhi-recipe-update',
   templateUrl: './recipe-update.component.html'
